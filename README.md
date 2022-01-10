@@ -33,3 +33,19 @@ $ cd webhook/
 $ pip3 install -r requirements.txt
 $ python3 -m src
 ```
+
+## Deploy to Heroku
+
+```bash
+create project on Heroku
+$ git clone https://github.com/pentestba/webhook.git
+$ heroku login
+$ cd webhook/
+$ git init
+$ heroku git:remote -a yourHerokuProjectName
+
+Deploy the code and changes you make:
+$ git add .
+$ git commit -am "make it better"
+$ git push heroku master  // if this dont work use this: $ git push heroku HEAD:master
+```
