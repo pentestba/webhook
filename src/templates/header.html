@@ -23,18 +23,17 @@
 
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/">Webhook.link</a></li>
-        {% if route_path %}
-            <li class="breadcrumb-item active" aria-current="page">inspect / {{ route_path }}</li>
-        {% endif %}
+	{% if route_path %}
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+	{% endif %}	
     </ol>
 </nav>
 
 <div style="text-align: right;">
-    <a href="https://github.com/gabfl/webhook"><button type="button" class="btn btn-success">Fork me <i class="fab fa-github"></i></button></a>
     {% if route_path %}
+		<input type="button" class="btn btn-dark" value="Refresh Page" onClick="location.href=location.href">
         <a href="/api/inspect/{{ route_path }}" target="_blank"><button type="button" class="btn btn-warning">View as Json</button></a>
         <a href="/api/delete/{{ route_path }}" target="_blank" onclick="return confirm('Confirm route deletion?');"><button type="button" class="btn btn-danger">Delete (Json)</button></a>
+		<a href="/new" target="_blank"><button type="button" class="btn btn-primary">New route</button></a>
     {% endif %}
-    <a href="/new" target="_blank"><button type="button" class="btn btn-primary">New route</button></a>
 </div>
