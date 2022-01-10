@@ -38,6 +38,7 @@ $ python3 -m src
 
 ```bash
 create project on Heroku
+you must have Heroku CLI and Git installed in your computer
 $ git clone https://github.com/pentestba/webhook.git
 $ heroku login
 $ cd webhook/
