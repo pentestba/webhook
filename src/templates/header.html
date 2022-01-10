@@ -21,13 +21,15 @@
 </head>
 <body>
 
-<nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-	{% if route_path %}
-        <li class="breadcrumb-item"><a href="/">Home</a></li>
-	{% endif %}	
-    </ol>
-</nav>
+{% if route_path %}
+	<nav aria-label="breadcrumb">
+		<ol class="breadcrumb">
+
+			<li class="breadcrumb-item"><a href="/">Home</a></li>
+		
+		</ol>
+	</nav>
+{% endif %}	
 
 <div style="text-align: right;">
     {% if route_path %}
